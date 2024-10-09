@@ -31,7 +31,7 @@
     left: 9%;
     width: 75px;
     height: 75px;
-    background-image: url("assets/bush.png");
+    background-image: url("public/assets/bush.png");
     background-size: contain;
     z-index: 1;
   }
