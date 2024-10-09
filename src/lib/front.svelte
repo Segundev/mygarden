@@ -23,7 +23,7 @@
     justify-content: center;
     align-items: center;
     background-color: #092e09;
-    background-image: url("public/assets/DesktopBG.jpg");
+    background-image: url("/assets/DesktopBG.jpg");
     background-size: contain;
     color: #ffffff;
     position: relative;
