@@ -1,6 +1,6 @@
 <script>
-  export let title = "Jayeola Garden Visual Story";
-  export let description = "Your description goes here";
+  export let title = "I Made My First Garden";
+  export let description = "I decided to make a garden and this is what I have. Nothing much but I learnt a lot";
 </script>
 
 <div class="fullscreen">
@@ -9,6 +9,7 @@
     <p>{description}</p>
   </div>
   <div class="scroll-down">
+    <img src="assets/vase.png" alt="" />
     <div class="arrow"></div>
   </div>
 </div>
@@ -21,8 +22,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f0;
+    background-color: #092e09;
+    background-image: url("assets/DesktopBG.jpg");
+    background-size: contain;
+    color: #ffffff;
     position: relative;
+  }
+
+  p {
+    color: white;
   }
 
   .content {
@@ -31,28 +39,29 @@
     max-width: 80%;
   }
 
-  h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-
-  p {
-    font-size: 1.2rem;
-  }
-
   .scroll-down {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
-    animation: bounce 2s infinite;
+    /* animation: bounce 1s infinite; */
+  }
+
+  .scroll-down img {
+    width: 100px;
+    height: 100px;
   }
 
   .arrow {
-    width: 30px;
-    height: 30px;
-    border: solid #333;
-    border-width: 0 3px 3px 0;
+    width: 10px;
+    height: 10px;
+    border: solid #161616;
+    border-width: 0 5px 5px 0;
     transform: rotate(45deg);
   }
 
@@ -84,6 +93,10 @@
     .arrow {
       width: 20px;
       height: 20px;
+    }
+
+    .fullscreen {
+      background-size: cover;
     }
   }
 </style>
