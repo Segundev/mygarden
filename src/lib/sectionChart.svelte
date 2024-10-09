@@ -17,4 +17,8 @@
     padding: 2rem;
     max-width: 700px;
   }
+
+  .flourish-embed {
+    height: 500px;
+  }
 </style>
