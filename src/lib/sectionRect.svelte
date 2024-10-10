@@ -1,8 +1,7 @@
 <div class="sectionRect">
   <p>
-    It all started with a friendly challenge. My neighbor, who had his eye on a plot of land behind our apartment,
-    wanted to plant maize, cassava, spinach, and okra. One day, during a casual chat, he asked why I hadn’t used the
-    little space behind my apartment to grow something myself.
+    Food inflation rose to its highest in over 28 years. A 50kg bag of rice which was sold for about 25 thousand naira
+    in 2022, now currently sells for about 120,000 naira.
   </p>
 </div>
 

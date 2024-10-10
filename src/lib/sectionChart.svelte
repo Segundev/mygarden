@@ -1,11 +1,18 @@
 <script>
-  //  let flourishUrl = "https://public.flourish.studio/resources/embed.js";
+  import { onMount } from "svelte";
+
+  onMount(() => {
+    const flourishScript = document.createElement("script");
+    flourishScript.src = "https://public.flourish.studio/resources/embed.js";
+    flourishScript.async = true;
+    document.body.appendChild(flourishScript);
+  });
 </script>
 
 <section>
   <h3>Consumer Price Index</h3>
-  <div class="flourish-embed flourish-chart" data-src="https://flo.uri.sh/visualisation/19721541">
-    <script src="https://public.flourish.studio/resources/embed.js" async></script>
+  <div class="flourish-embed flourish-chart" data-src="visualisation/19721541">
+    <!-- <script src="https://public.flourish.studio/resources/embed.js" async></script> -->
   </div>
 </section>
 

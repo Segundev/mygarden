@@ -1,10 +1,9 @@
 <section>
   <p>
-    It all started with a friendly challenge. My neighbor, who had his eye on a plot of land behind our apartment,
-    wanted to plant maize, cassava, spinach, and okra. One day, during a casual chat, he asked why I hadn’t used the
-    little space behind my apartment to grow something myself. Honestly, I’d always thought about starting a garden but
-    never quite took the plunge. I told him if I were to plant anything, it would be tomatoes, peppers, okra, and maybe
-    some other vegetables I found interesting.
+    The prices of local food commodities like tomatoes, peppers, and other vegetables were so expensive that recipes
+    requiring a lot of tomatoes and peppers were avoided in favor of alternative soup ingredients. Rice, which is a
+    major part of our meals, doubled in price, as did beans, which are heavily relied upon as a source of protein to
+    prevent meals from being entirely energy-based.
   </p>
 </section>
 
