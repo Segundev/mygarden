@@ -19,13 +19,13 @@
     <div class="text-content">
       <p>
         It all started with a friendly challenge. My neighbor, who had his eye on a plot of land behind our apartment,
-        wanted to plant maize and cassava with spinach and okro along. One day, while chatting, he casually asked why I
-        hadn’t used the little space behind my apartment to grow something myself. Honestly, I’d always thought about
-        starting a garden but had never taken the plunge. I told him if I were to plant anything, it would be tomatoes,
-        peppers, okro and any other vegetables that I find interesting. Even though we both had interest in farming, the
-        rising cost of food and the pressing need for more affordable options was one of the main reasons. It wasn’t
-        just us feeling the pinch—food prices in Nigeria had skyrocketed, making even basic meals a challenge for many
-        households.
+        wanted to plant maize<span>&#127805;</span> and cassava<span>&#129364;</span> with spinach and okro along. One
+        day, while chatting, he casually asked why I hadn’t used the little space behind my apartment to grow something
+        myself. Honestly, I’d always thought about starting a garden but had never taken the plunge. I told him if I
+        were to plant anything, it would be tomatoes<span>&#127813;</span>, peppers<span>&#127798;</span>, okro and any
+        other vegetables<span>&#129362;</span> that I find interesting. Even though we both had interest in farming, the
+        rising cost of food and the pressing need for more affordable options was one of the main reasons. It wasn’t just
+        us feeling the pinch—food prices in Nigeria had skyrocketed, making even basic meals a challenge for many households.
       </p>
     </div>
 
@@ -83,6 +83,8 @@
   .main-image img {
     width: 100%;
     height: 100%;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
     object-fit: cover;
   }
 
@@ -118,6 +120,8 @@
   .thumbnail img {
     width: 100%;
     height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    border-radius: 8px;
     object-fit: cover;
     transition: filter 0.3s ease;
   }

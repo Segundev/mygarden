@@ -1,6 +1,5 @@
 <script>
   import FrontPage from "./lib/front.svelte";
-  import Paragraph from "./lib/section.svelte";
   import Chart from "./lib/sectionChart.svelte";
   import Rect from "./lib/sectionRect.svelte";
   import FirstSection from "./lib/firstSection.svelte";
@@ -12,17 +11,17 @@
   <FrontPage />
   <article>
     <FirstSection />
-    <Paragraph />
-    <Rect />
-    <Chart />
     <section>
       <p>
         The prices of local food commodities like tomatoes, peppers, and other vegetables were so expensive that recipes
-        requiring a lot of tomatoes and peppers were avoided in favor of alternative soup ingredients. Rice, which is a
-        major part of our meals, doubled in price, as did beans, which are heavily relied upon as a source of protein to
-        prevent meals from being entirely energy-based.
+        requiring a lot of tomatoes and peppers were avoided in favor of alternative soup<span>&#129367;</span> ingredients.
+        Rice, which is a major part of our meals, doubled in price, as did beans, which are heavily relied upon as a source
+        of protein to prevent meals from being entirely energy-based.
       </p>
-
+    </section>
+    <Rect />
+    <Chart />
+    <section>
       <p>
         Though the idea of growing my own food intrigued me, the thought of actually starting felt overwhelming.
         Fortunately, my dad came for a visit around that time. A seasoned farmer in his youth, he still had all the
@@ -54,6 +53,17 @@
         normal land or I could prepare plant pot. I had to get cemt bags, wash it and filled it with filtered soil,
         removing stones and debris.
       </p>
+      <div class="image-container">
+        <div class="image-wrapper one">
+          <img src="/assets/image-5.jpg" alt="" srcset="" />
+        </div>
+        <div class="image-wrapper two">
+          <img src="/assets/image-6.jpg" alt="" srcset="" />
+        </div>
+        <!-- <div class="image-wrapper three">
+          <img src="/assets/image-5.jpg" alt="" srcset="" />
+        </div> -->
+      </div>
       <p>
         After planting, I was told to apply fungicides after two weeks and wet the plant every day. Did this for about a
         month, and my plants started growing, fruiting exellently well with green leaves so large my neighbours
@@ -99,6 +109,46 @@
     margin: 0 auto;
     padding: 0 2rem;
     max-width: 700px;
+  }
+
+  .image-container {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    margin: 50px auto;
+  }
+
+  .image-wrapper {
+    position: absolute;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+    transform: rotate(0deg);
+    /* transition: transform 0.3s ease; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .image-wrapper.one {
+    transform: rotate(5deg);
+    left: 70px;
+  }
+
+  .image-wrapper.two {
+    transform: rotate(346deg);
+    top: 20px;
+  }
+
+  /* .image-wrapper:hover {
+    transform: rotate(5deg) translateY(-10px);
+    z-index: 10;
+  } */
+
+  .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
   }
 
   /* article {

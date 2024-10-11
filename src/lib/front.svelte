@@ -29,6 +29,7 @@
     position: relative;
   }
 
+  h1,
   p {
     color: white;
   }
