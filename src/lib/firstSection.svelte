@@ -4,6 +4,10 @@
     { src: "assets/image-9.jpg", alt: "Image 2" },
     { src: "assets/image-16.jpg", alt: "Image 3" },
     { src: "assets/image-18.jpg", alt: "Image 4" },
+    { src: "assets/image-14.jpg", alt: "Image 14" },
+    { src: "assets/image-31.jpg", alt: "Image 31" },
+    { src: "assets/image-5.jpg", alt: "Image 3" },
+    { src: "assets/image-6.jpg", alt: "Image 4" },
   ];
 
   let selectedImageIndex = 0;
@@ -32,10 +36,15 @@
     <div class="main-image">
       <img src={images[selectedImageIndex].src} alt={images[selectedImageIndex].alt} />
     </div>
-    <div class="thumbnail-container">
+    <div class="thumbnail-container" style="--width:150px; --height:250px; --quantity:8">
       <div class="thumbnail-image-wrapper">
         {#each images as image, index}
-          <div class="thumbnail" on:click={() => setMainImage(index)} class:selected={index === selectedImageIndex}>
+          <div
+            class="thumbnail"
+            style="--position: {index}"
+            on:click={() => setMainImage(index)}
+            class:selected={index === selectedImageIndex}
+          >
             <img src={image.src} alt={image.alt} />
           </div>
         {/each}
@@ -91,7 +100,15 @@
   .thumbnail-container {
     grid-area: thumbnails;
     justify-self: center;
-    width: 65%;
+    width: 75%;
+    margin: 2rem auto;
+    overflow: hidden;
+    padding: 0 1rem;
+    box-shadow:
+      rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+      rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    border-radius: 10px;
   }
 
   .thumbnail-container p {
@@ -101,20 +118,46 @@
   }
 
   .thumbnail-image-wrapper {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 4px;
+    gap: 4px; */
 
     /* height: 100px; Fixed height for consistency */
     /* width: 75%; */
+
+    display: flex;
+    gap: 4px;
+    width: 100%;
+    min-width: calc(var(--width) * var(--quantity));
+    position: relative;
+    height: 75px;
   }
 
   .thumbnail {
     /* flex: 1;
     cursor: pointer;
     transition: filter 0.3s ease; */
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 2 / 1;
     cursor: pointer;
+    /* width: 100%; */
+
+    /* testing out animation */
+    width: var(--width);
+    /* height: var(--height); */
+    position: absolute;
+    left: 100%;
+    transition: filter 0.5s;
+    animation: autoRun 10s linear infinite;
+    animation-delay: calc((8.25s / var(--quantity)) * (var(--position) - 1));
+  }
+
+  @keyframes autoRun {
+    from {
+      left: 100%;
+    }
+    to {
+      left: calc((var(--width)) * -1);
+    }
   }
 
   .thumbnail img {
@@ -160,9 +203,9 @@
       height: 400px; /* Taller on larger screens */
     }
 
-    .thumbnail-container .thumbnail-image-wrapper {
+    /* .thumbnail-container .thumbnail-image-wrapper {
       padding-top: 2rem;
-    }
+    } */
 
     .text-content p {
       padding-right: 6rem;
